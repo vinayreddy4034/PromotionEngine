@@ -15,6 +15,7 @@ Input should be in JSON format
   }
 ]
 
+![Alt text](https://github.com/vinayreddy4034/PromotionEngine/blob/main/Snapshots/Input.jpg?raw=true "Input")
 
 Output will come in following format
 
@@ -31,5 +32,7 @@ Output will come in following format
   ],
   "totalAmount": 290
 }
+
+![Alt text](https://github.com/vinayreddy4034/PromotionEngine/blob/main/Snapshots/Output.jpg?raw=true "Input")
 
 
