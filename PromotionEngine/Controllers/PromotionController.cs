@@ -20,9 +20,13 @@ namespace PromotionEngine.Controllers
         }
 
         [HttpPost]
-        public OrderDetails Calculate(ProductCart[] productCarts)
+        public IActionResult Calculate(ProductCart[] productCarts)
         {
-            return _promotionExecutor.ApplyPromotion(productCarts);
+            if(productCarts == null)
+            {
+                return BadRequest();
+            }
+            return Ok(_promotionExecutor.ApplyPromotion(productCarts));
         }
     }
 }

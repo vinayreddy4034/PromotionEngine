@@ -1,0 +1,27 @@
+name: products CI CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/checkout@v2
+    
+      - name: dotnet framework setup
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      
+      - name: dotnet restore packages
+        run: dotnet restore
+
+      - name: dotnet build
+        run: dotnet build -c Release --no-restore
+        
+      - name: run test cases
+        run: dotnet test -c Release
