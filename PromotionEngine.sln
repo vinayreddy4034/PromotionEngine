@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Logic", "Promotiom.Logic\Promotion.Logic.csproj", "{A103DF57-CC21-40DA-91AC-05243755CDEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Promotion.Logic", "Promotiom.Logic\Promotion.Logic.csproj", "{A103DF57-CC21-40DA-91AC-05243755CDEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Model", "Promotion.Model\Promotion.Model.csproj", "{37723705-8963-429E-818E-F3A24368B0C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Promotion.Model", "Promotion.Model\Promotion.Model.csproj", "{37723705-8963-429E-818E-F3A24368B0C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromotionEngine", "PromotionEngine\PromotionEngine.csproj", "{BB776D91-E196-4666-9774-E937C7B81424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PromotionEngine", "PromotionEngine\PromotionEngine.csproj", "{BB776D91-E196-4666-9774-E937C7B81424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.DAL", "Promotion.DAL\Promotion.DAL.csproj", "{2C83145E-7502-4C02-867B-5A7A99D162BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Promotion.DAL", "Promotion.DAL\Promotion.DAL.csproj", "{2C83145E-7502-4C02-867B-5A7A99D162BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromotionEngine.Test", "PromotionEngine.Test\PromotionEngine.Test.csproj", "{E1102518-B933-42E1-A424-C5BCE2798AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2C83145E-7502-4C02-867B-5A7A99D162BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C83145E-7502-4C02-867B-5A7A99D162BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C83145E-7502-4C02-867B-5A7A99D162BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1102518-B933-42E1-A424-C5BCE2798AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1102518-B933-42E1-A424-C5BCE2798AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1102518-B933-42E1-A424-C5BCE2798AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1102518-B933-42E1-A424-C5BCE2798AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

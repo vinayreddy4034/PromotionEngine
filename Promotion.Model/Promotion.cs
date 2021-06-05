@@ -14,7 +14,7 @@ namespace Promotion.Model
         public virtual ICollection<ProductOffer> ProductOffers { get; set; }
 
 
-        public IEnumerable<ProductCart> Validate(Order order, IEnumerable<ProductCart> validatedItems)
+        public IEnumerable<ProductCart> Validate(OrderDetails order, IEnumerable<ProductCart> validatedItems)
         {
             var foundItems = new List<ProductCart>();
             if (ProductOffers == null || ProductOffers.Count < 1)
@@ -36,7 +36,7 @@ namespace Promotion.Model
             return foundItems;
         }
 
-        private void ApplyPromotion(Order order, List<ProductCart> foundItems)
+        private void ApplyPromotion(OrderDetails order, List<ProductCart> foundItems)
         {
             var found = foundItems.Count() > 0;
             if (found)

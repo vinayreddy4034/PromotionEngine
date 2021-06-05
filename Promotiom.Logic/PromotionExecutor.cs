@@ -12,13 +12,21 @@ namespace Promotiom.Logic
 
         public PromotionExecutor(PromotionContext promotionContext)
         {
+            if(promotionContext == null)
+            {
+                throw new ArgumentNullException(nameof(promotionContext));
+            }
             this.promotionContext = promotionContext;
             promotionContext.Database.EnsureCreated();
         }
-        public Order ApplyPromotion(IEnumerable<ProductCart> productItems)
+        public OrderDetails ApplyPromotion(IEnumerable<ProductCart> productItems)
         {
+            if (productItems == null)
+            {
+                throw new ArgumentNullException(nameof(productItems));
+            }
             var foundItems = new List<ProductCart>();
-            var order = new Order { Items = productItems, TotalAmount = 0 };
+            var order = new OrderDetails { Items = productItems, TotalAmount = 0 };
             foreach (var promotion in promotionContext.Promotions.Include("ProductOffers"))
             {
                 var validatedItems = promotion.Validate(order, foundItems);
@@ -28,7 +36,7 @@ namespace Promotiom.Logic
             return order;
         }
 
-        private static void UpdateValidatedItems(List<ProductCart> foundItems, IEnumerable<ProductCart> validatedItems)
+        private void UpdateValidatedItems(List<ProductCart> foundItems, IEnumerable<ProductCart> validatedItems)
         {
             if (validatedItems == null || validatedItems.Count() < 1)
                 return;
@@ -38,7 +46,7 @@ namespace Promotiom.Logic
                     foundItems.Add(item);
         }
 
-        private void ApplyRegularPrice(Order order, List<ProductCart> foundItems)
+        private void ApplyRegularPrice(OrderDetails order, List<ProductCart> foundItems)
         {
             foreach (var item in order.Items)
             {
